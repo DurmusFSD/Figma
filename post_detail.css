@@ -1,0 +1,65 @@
+.post_detail-container{
+    margin-top: 5rem;
+}
+.post_detail-container .post_detail-image{
+    width: 100%;
+    height: 800px;
+}
+.post_detail-container h1,h2,h3{
+    font-size: 42px;
+    color: #3A0CA3;
+    font-weight: bold;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    margin: 100px 150px 100px 80px;
+}
+.post_detail-container .durmus{
+    color: #D05270;
+}
+.post_detail-container .özgül{
+    color: #454545;
+}
+.post_detail-container h1{
+    font-size: 36px;
+}
+.post_detail-container h2{
+    font-size: 24px;
+}
+.post_detail-container p{
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    margin: 100px 150px 100px 80px;
+}
+
+/*dddddd*/
+
+@media only screen and (max-width: 850px) {
+    .post_detail-container {
+        margin-top: 0;
+    }
+    .post_detail-container .post_detail-image{
+        width: 100%;
+        height: 250px;
+    }
+    .post_detail-container h1,h2,h3{
+        font-size: 20px;
+        color: #3A0CA3;
+        font-weight: bold;
+        margin-top: 3rem;
+        margin-bottom: rem;
+        margin: 50px 75px 50px 40px;
+        text-align: center;
+    }
+    .post_detail-container h1{
+        font-size: 18px;
+        color: #D05270;
+    }
+    .post_detail-container h2{
+        font-size: 16px;
+    }
+    .post_detail-container p{
+        font-size: 14px;
+    }
+    
+}

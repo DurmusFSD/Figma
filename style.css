@@ -1,0 +1,301 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(./Assets/Fonts/Montserrat/Montserrat-Light.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(./Assets/Fonts/Montserrat/Montserrat-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(./Assets/Fonts/Montserrat/Montserrat-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(./Assets/Fonts/Montserrat/Montserrat-SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(./Assets/Fonts/Montserrat/Montserrat-Bold.ttf);
+    font-weight: bold;
+}
+*{
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    color: #424242;
+}
+body{
+    width: 100%;
+}
+
+.app__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+.app_logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.app_logo.app__title{
+    margin-right: 1rem;
+}
+.app__title2{
+    display: none;
+}
+.menu_collapse{
+    display: none;
+}
+.app__links{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.app__links li{
+    margin-right: 1.5rem;
+    font-size: 14px;
+    font-weight: 500;
+}
+.app__links li.active{
+    color: #5A47AB;
+    font-weight: 600;
+}
+.app__showcase{
+    display: flex;
+    margin:5rem 0;
+}
+.app__showcase-info{
+    flex: 6;
+    padding: 0 3rem;
+    
+}
+.app__showcase-info h1, h3{
+    font-size: 52px;
+    margin: 0;
+}
+.app__showcase-info h1{
+    color: #d05270;
+    font-weight: bold;
+}
+.app__showcase-info h3{
+    font-weight: 500;
+}
+.app__showcase-info p{
+    font-size: 18px;
+    font-weight: 400;
+}
+.app__showcase-image{
+    flex: 4;
+    padding: 0 3rem;
+}
+.app__links{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+.app__links .app__link{
+    color: white;
+    font-size: 12px;
+    width: 30%;
+    height: 60px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app__links .app__link img{
+    margin-right: 2rem;
+}
+.app__links .app__link.twitter{
+    background-color: #47ACDF;
+}
+.app__links .app__link.linkedin{
+    background-color: #1275B1;
+}
+.app__links .app__link.medium{
+    background-color: #000000;
+}
+.app__blog-categories{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.app__blog-categories .item{
+    font-weight: 500;
+    font-size: 18px;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+.app__blog-categories .item.active{
+    color: #D05270;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid #d05270;
+    padding: 0 2rem;
+    padding-bottom: 0.5rem;
+}
+.app__post-list {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10%;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 25px;
+}
+.app__post-list .app__post-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+
+.app__post-list .app__post-card .post-image{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+.app__post-list .app__post-card .post-date{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+.app__post-list .app__post-card .post-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #D05270;
+    margin: 0.5rem 0;
+}
+.app__post-list .app__post-card .post-info{
+    font-weight: 400;
+    margin: 0.5rem;
+}
+.app__post-list .app__post-card .post-link{
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #D05270;
+    border-bottom:1px solid #D05270;
+    padding-bottom: 5px;
+    width: fit-content;
+    margin-top: 2rem;
+}
+.footer{
+    position: relative;
+    text-align: center;
+    margin: 5rem 0;
+}
+@media only screen and (max-width: 850px) {
+    body{
+        width: 90%;
+        margin: auto;
+    }
+    .app__links-container{
+        position: absolute;
+        opacity: 0;
+        left: 0%;
+        top: 10%;
+        width: 100%;
+        height: 0%;
+        background-color: #fff;
+        transition: height 250ms ease-in-out;
+    }
+    .app__links-container.active{
+        height: 100%;
+        opacity: 1;
+    }
+    .app__links{
+        z-index: 1;
+        flex-direction: column;
+    }
+    .app__links li{
+        margin-bottom: 1.5rem;
+        font-size: 20px;
+    }
+    .menu_collapse{
+        display: none;
+    }
+    .app__title2{
+        display: block;
+        margin-right: 1rem;
+    }
+    .app__title{
+        display: none;
+    }
+    .app__showcase{
+        display: flex;
+        margin: 5rem 0;
+    }
+    .app__showcase-info{
+        padding: 0;
+    }
+    .app__showcase-info h1, h3{
+        font-size: 20px;
+        margin: 0;
+        color: #d05270;
+        font-weight: bold;
+    }
+    .app__showcase-info h3{
+        color: #424242;
+        font-weight: 500;
+    }
+    .app__showcase-info p{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .app__showcase-image{
+        display: none;
+    }
+    .app__links{
+        flex-direction: row;
+    }
+    .app__links .app__link{
+        font-size: 12px;
+        font-weight: 500;
+        height: 40px;
+    }
+    .app__links .app__link img{
+        margin-right: 0.5rem;
+    }
+    .app__blog-categories{
+        overflow-x: auto;
+        padding: 0;
+    }
+    .app__blog-categories.item{
+        font-weight: 600;
+        font-size: 12px;
+        margin-right: 1rem;
+        white-space: nowrap;
+    }
+    .app__blog-categories.item.active{
+        font-size: 14px;
+    }
+    .app__post-list .app__post-card{
+        margin: 1rem 0;
+    }
+    .app__post-list .app__post-card .post-image{
+        height: 200px;
+    }
+    .app__post-list .app__post-card .post-date{
+        font-size: 10px;
+        font-weight: 600;
+    }
+    .app__post-list .app__post-card .post-title{
+        font-size: 20px;
+    }
+    .app__post-list .app__post-card .post-info{
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .app__post-list .app__post-card .post-link{
+        font-size: 14px;
+    }
+}
